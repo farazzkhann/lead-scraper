@@ -1,16 +1,104 @@
-# React + Vite
+# LeadScraper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered B2B lead generation tool built with React and Groq AI. Generate qualified leads instantly by filtering by industry, location, role, company size, and keywords.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- AI-powered lead generation using Groq (LLaMA 3.3 70B)
+- Filter by industry, location, target role, company size, and keywords
+- Lead scoring (1–100) with visual score bars
+- Status badges — Hot, Warm, Cold
+- Lead detail panel with full contact info and AI insight
+- Copy email and phone to clipboard in one click
+- Filter leads by status and sort by score or name
+- Export leads to CSV
+- Select and bulk delete leads
+- Leads saved to localStorage — survive page refresh
+- Clean dark UI with Tailwind CSS and Lucide icons
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React + Vite
+- Tailwind CSS v4
+- Groq API (LLaMA 3.3 70B)
+- Lucide React icons
+- localStorage for persistence
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repo
+
+\`\`\`bash
+git clone https://github.com/YOUR_USERNAME/lead-scraper.git
+cd lead-scraper
+\`\`\`
+
+### 2. Install dependencies
+
+\`\`\`bash
+npm install
+\`\`\`
+
+### 3. Get a free Groq API key
+
+- Go to https://console.groq.com
+- Sign up with your Google account
+- Create a new API key
+
+### 4. Create a .env file
+
+\`\`\`
+VITE_GROQ_API_KEY=your_groq_api_key_here
+\`\`\`
+
+### 5. Run the app
+
+\`\`\`bash
+npm run dev
+\`\`\`
+
+Open http://localhost:5173 in your browser.
+
+## Project Structure
+
+\`\`\`
+src/
+├── components/
+│ ├── Avatar.jsx
+│ ├── LeadDetail.jsx
+│ ├── LeadTable.jsx
+│ ├── ScoreBar.jsx
+│ ├── SearchForm.jsx
+│ ├── StatCard.jsx
+│ └── StatusBadge.jsx
+├── constants/
+│ └── index.js
+├── hooks/
+│ └── useLeads.js
+├── services/
+│ └── groq.js
+├── utils/
+│ └── exportCSV.js
+├── App.jsx
+├── index.css
+└── main.jsx
+\`\`\`
+
+## Usage
+
+1. Select your target **industry** and **location**
+2. Choose the **job title** you want to reach
+3. Set **company size** range
+4. Add optional **keywords** to narrow the niche
+5. Choose how many leads to generate
+6. Click **Find Leads**
+7. Click any row to see full contact details and AI insight
+8. Export selected leads to CSV
+
+## Important Note
+
+Leads are AI-generated based on real-world patterns. Emails and phone numbers are synthesized and should be verified before outreach. Use tools like Hunter.io to verify emails.
+
+## License
+
+MIT
