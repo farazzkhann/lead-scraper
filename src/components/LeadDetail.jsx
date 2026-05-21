@@ -7,7 +7,7 @@ import {
   MapPin,
   Users,
   DollarSign,
-  Linkedin,
+  Link2,
   Copy,
   Check,
   Sparkles,
@@ -159,7 +159,7 @@ export default function LeadDetail({ lead, onClose }) {
                 rel="noreferrer"
                 className="text-sm text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1.5"
               >
-                <Linkedin size={14} /> View LinkedIn Profile
+                <Link2 size={14} /> View LinkedIn Profile
               </a>
             </div>
           )}
